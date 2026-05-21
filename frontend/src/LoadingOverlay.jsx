@@ -5,7 +5,7 @@ import { Brain, Search, FileText, Sparkles, CheckCircle2 } from 'lucide-react';
 const STEPS = [
   { id: 1, icon: FileText,    label: 'Reading content',         detail: 'Parsing and cleaning input text...' },
   { id: 2, icon: Search,      label: 'Analyzing structure',     detail: 'Identifying key themes and context...' },
-  { id: 3, icon: Brain,       label: 'Generating insights',     detail: 'Running llama-3.3-70b inference...' },
+  { id: 3, icon: Brain,       label: 'Generating insights',     detail: 'Applying Neural Engine optimization...' },
   { id: 4, icon: Sparkles,    label: 'Finalizing report',       detail: 'Structuring output sections...' },
 ];
 
@@ -159,7 +159,7 @@ export default function LoadingOverlay({ isVisible }) {
           AI is analyzing your content
         </p>
         <p className="text-gray-500 text-xs mt-1">
-          Powered by Llama 3.3 70B via Groq
+          Neural Engine: AI-powered intelligent content analysis
         </p>
       </div>
 

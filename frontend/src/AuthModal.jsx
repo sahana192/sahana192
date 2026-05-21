@@ -57,8 +57,12 @@ export default function AuthModal({ onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="glass-panel w-full max-w-md p-8 relative">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-page transition-colors duration-500 overflow-hidden">
+      {/* Background Aesthetics for Dedicated Page Feel */}
+      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary-600/10 blur-[120px] animate-pulse" />
+      <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-indigo-600/10 blur-[120px] animate-pulse" style={{ animationDelay: '2s' }} />
+      
+      <div className="relative z-10 glass-panel w-full max-w-md p-8 shadow-2xl border-white/5">
         <div className="text-center mb-8">
           <div className="w-12 h-12 bg-primary-500/20 border border-primary-500/30 rounded-xl flex items-center justify-center mx-auto mb-4">
             <Brain className="w-6 h-6 text-primary-400" />

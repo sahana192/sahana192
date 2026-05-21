@@ -25,7 +25,11 @@ export default {
         accent: {
           400: '#34d399',
           500: '#10b981',
-        }
+        },
+        main: 'var(--text-main)',
+        muted: 'var(--text-muted)',
+        page: 'var(--bg-page)',
+        card: 'var(--bg-card)',
       },
       animation: {
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',

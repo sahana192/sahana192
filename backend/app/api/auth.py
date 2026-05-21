@@ -1,6 +1,6 @@
 import secrets
 from datetime import datetime, timedelta
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, Request, status
 import pandas as pd
 from app.core.excel_db import ExcelDB
 from app.core.security import get_password_hash, verify_password, create_access_token
@@ -72,7 +72,7 @@ async def get_me(current_user: dict = Depends(get_current_user)):
     }
 
 @router.post("/forgot-password")
-async def forgot_password(req: ForgotPasswordRequest):
+async def forgot_password(req: ForgotPasswordRequest, request: Request):
     users_df = ExcelDB.get_users()
     if users_df[users_df['email'] == req.email].empty:
         return {"message": "If that email exists, a reset link has been generated.", "simulated_email_link": None}
@@ -89,7 +89,8 @@ async def forgot_password(req: ForgotPasswordRequest):
     tokens_df = pd.concat([tokens_df, pd.DataFrame([new_token])], ignore_index=True)
     ExcelDB.save_tokens(tokens_df)
     
-    reset_link = f"http://localhost:5173/?reset_token={reset_token}"
+    frontend_origin = request.headers.get("origin") or "http://localhost:5173"
+    reset_link = f"{frontend_origin}/?reset_token={reset_token}"
     return {
         "message": "Password reset link generated successfully.", 
         "simulated_email_link": reset_link
