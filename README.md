@@ -1,16 +1,15 @@
-## Hi there 👋
+# Hi, I'm Sahana
 
-<!--
-**sahana192/sahana192** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Software engineer in Bengaluru building backend services and full-stack web apps. Currently a Web Developer at NewJaisa Technologies, working on e-commerce features, site performance, search and third-party API integrations.
 
-Here are some ideas to get you started:
+**Tech:** Java · Spring Boot · Python · FastAPI · JavaScript · React · Node.js · MySQL · MongoDB · RabbitMQ · Docker · Kubernetes · Git
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Projects
+
+- **[referral-rewards-service](https://github.com/sahana192/referral-rewards-service)**: Spring Boot referral & rewards backend with JWT, MySQL, RabbitMQ events, MongoDB audit log, Docker and Kubernetes *(in development)*
+- **[infera-ai](https://github.com/sahana192/infera-ai)**: AI content analysis and summarization platform (FastAPI + React + Groq LLMs)
+- **[asset-depreciation-api](https://github.com/sahana192/asset-depreciation-api)**: Node.js/Express REST API for depreciation schedules, with validation and automated tests
+
+## Connect
+
+[LinkedIn](https://www.linkedin.com/in/sahana-s-241226350/)
